@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="mobile-bg">
+    <div class="mobile-container">
+      <header class="header-with-title">
+        <i class="fas fa-chevron-left" onclick="history.back()"></i>
+        <h2>Settings</h2>
+        <div class="menu-icon"><span></span><span></span><span></span></div>
+      </header>
+
+      <section class="settings-group">
+        <h3>Account Settings</h3>
+        <div class="settings-card">
+          <div class="setting-item">
+            <i class="fas fa-user-circle icon-teal"></i>
+            <span>Edit Profile Info</span>
+          </div>
+          <div class="setting-item">
+            <i class="fas fa-lock icon-teal"></i>
+            <span>Change Password</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-group">
+        <h3>Notification Settings</h3>
+        <div class="settings-card border-teal">
+          <div class="setting-item">
+            <span>Announcements</span>
+            <label class="switch"
+              ><input type="checkbox" checked /><span class="slider"></span
+            ></label>
+          </div>
+          <div class="setting-item">
+            <span>Service Updates</span>
+            <label class="switch"
+              ><input type="checkbox" checked /><span class="slider"></span
+            ></label>
+          </div>
+        </div>
+      </section>
+
+      <p class="terms-text">
+        By continuing, you agree to Barangay Information System's
+        <a href="#">Terms of Service and Privacy Policy</a>
+      </p>
+
+      <footer class="sticky-footer">
+        <div class="social-links">
+          <i class="fab fa-facebook"></i><i class="fab fa-twitter"></i
+          ><i class="fab fa-instagram"></i>
+        </div>
+        <div class="contact-info">
+          <i class="fas fa-phone-alt"></i>
+          <div class="phone-text">
+            <span class="number">+639123456789</span>
+            <span class="label">Call Us</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

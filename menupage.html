@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="mobile-bg">
+    <div class="mobile-container">
+      <header class="simple-header">
+        <i class="fas fa-chevron-left" onclick="history.back()"></i>
+      </header>
+
+      <div class="menu-hero">
+        <div class="main-logo">
+          <i class="fas fa-shield-halved"></i>
+          <h1>
+            BARANGAY <br />
+            INFORMATION SYSTEM
+          </h1>
+        </div>
+        <button class="btn-login">Login/Register</button>
+        <a href="#" class="admin-link">Admin Login</a>
+      </div>
+
+      <nav class="menu-list-container">
+        <ul class="menu-links">
+          <li onclick="window.location.href='index.html'">
+            <i class="fas fa-bullhorn"></i> Announcements & Events
+          </li>
+          <a href="officials.html" class="list-item"
+            ><i class="fas fa-users"></i> Officials Directory</a
+          >
+          <li><i class="fas fa-file-contract"></i> Request Certificate</li>
+          <li><i class="fas fa-comments"></i> Residence Feedback</li>
+          <li><i class="fas fa-handshake"></i> Meeting Request</li>
+          <li onclick="window.location.href='settings.html'">
+            <i class="fas fa-cog"></i> Settings
+          </li>
+        </ul>
+      </nav>
+
+      <footer class="sticky-footer">
+        <div class="social-links">
+          <i class="fab fa-facebook"></i><i class="fab fa-twitter"></i
+          ><i class="fab fa-instagram"></i>
+        </div>
+        <div class="contact-info">
+          <i class="fas fa-phone-alt"></i>
+          <div class="phone-text">
+            <span class="number">+639123456789</span>
+            <span class="label">Call Us</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

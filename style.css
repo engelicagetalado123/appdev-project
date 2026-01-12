@@ -1,0 +1,704 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.mobile-container {
+  width: 375px; /* iPhone width */
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: relative;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #008080;
+}
+
+.logo i {
+  font-size: 24px;
+}
+
+.logo-text {
+  line-height: 1;
+}
+.logo-text strong {
+  display: block;
+  font-size: 12px;
+  color: #333;
+}
+.logo-text span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-icon span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #333;
+  margin: 4px 0;
+}
+
+/* Hero */
+.hero h1 {
+  font-size: 22px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.hero p {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Carousel */
+.view-all-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.view-all {
+  text-decoration: none;
+  color: #999;
+  font-size: 10px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.main-card {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.main-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 11px;
+}
+
+.card-overlay small {
+  display: block;
+  color: #ff9999;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 20px;
+}
+
+/* Announcements */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 10px;
+}
+
+.section-header h2 {
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.announce-card {
+  background: #9bb8b8;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.announce-card i {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.announce-card h3 {
+  font-size: 10px;
+  line-height: 1.1;
+}
+
+.announce-card span {
+  font-size: 8px;
+  opacity: 0.8;
+}
+
+/* Official */
+.official-card {
+  background: linear-gradient(135deg, #7eb6b6, #4b8d8d);
+  height: 120px;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  color: white;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.official-info h3 {
+  font-size: 14px;
+}
+.official-info p {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+.official-img {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  width: 110px;
+  filter: drop-shadow(0px -5px 10px rgba(0, 0, 0, 0.2));
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  color: #333;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: right;
+}
+
+.contact i {
+  color: #666;
+  font-size: 18px;
+}
+.contact strong {
+  display: block;
+  font-size: 11px;
+}
+.contact span {
+  font-size: 9px;
+  color: #999;
+}
+footer {
+  display: flex;
+  justify-content: space-between; /* Pinaghihiwalay ang kaliwa at kanan */
+  align-items: center;
+  padding: 15px 5px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 20px;
+}
+
+/* Social Icons Styling */
+.social-links {
+  display: flex;
+  gap: 15px; /* Patlang sa pagitan ng mga icons */
+}
+
+.social-links i {
+  font-size: 20px;
+  color: #444; /* Dark gray gaya ng nasa photo */
+  cursor: pointer;
+}
+
+/* Contact Info Styling */
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #888; /* Mas light na gray para sa text */
+}
+
+.contact-info i {
+  font-size: 18px;
+  transform: rotate(
+    10deg
+  ); /* Bahagyang nakatagilid ang phone icon gaya ng nasa image */
+}
+
+.phone-text {
+  display: flex;
+  flex-direction: column; /* Pinagpapatong ang number at "Call Us" */
+  line-height: 1.2;
+}
+
+.phone-text .number {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+}
+
+.phone-text .label {
+  font-size: 10px;
+}
+:root {
+  --primary-teal: #00897b;
+  --light-teal: #e0f2f1;
+  --border-color: #b2dfdb;
+}
+
+/* Menu Page Styles */
+.menu-hero {
+  text-align: center;
+  padding: 30px 0;
+}
+.main-logo i {
+  font-size: 60px;
+  color: var(--primary-teal);
+}
+.main-logo h1 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.btn-login {
+  background: var(--primary-teal);
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 20px;
+  margin: 20px 0 5px;
+  font-weight: bold;
+}
+.admin-link {
+  font-size: 10px;
+  color: var(--primary-teal);
+  text-decoration: none;
+}
+
+.menu-list-container {
+  background: #fdfdfd;
+  border-radius: 30px 30px 0 0;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+}
+.menu-links {
+  list-style: none;
+}
+.menu-links li {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #444;
+}
+.menu-links li i {
+  color: var(--primary-teal);
+  font-size: 18px;
+}
+
+/* Settings Styles */
+.header-with-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.settings-group h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.settings-card {
+  background: #f5f5f5;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.border-teal {
+  border: 2px solid var(--primary-teal);
+  background: white;
+}
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+.icon-teal {
+  color: var(--primary-teal);
+  font-size: 22px;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: var(--primary-teal);
+}
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+.terms-text {
+  font-size: 9px;
+  text-align: center;
+  color: #888;
+  margin-top: 20px;
+}
+:root {
+  --primary-teal: #00897b;
+  --light-teal: #e0f2f1;
+  --border-color: #b2dfdb;
+}
+
+/* Menu Page Styles */
+.menu-hero {
+  text-align: center;
+  padding: 30px 0;
+}
+.main-logo i {
+  font-size: 60px;
+  color: var(--primary-teal);
+}
+.main-logo h1 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.btn-login {
+  background: var(--primary-teal);
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 20px;
+  margin: 20px 0 5px;
+  font-weight: bold;
+}
+.admin-link {
+  font-size: 10px;
+  color: var(--primary-teal);
+  text-decoration: none;
+}
+
+.menu-list-container {
+  background: #fdfdfd;
+  border-radius: 30px 30px 0 0;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+}
+.menu-links {
+  list-style: none;
+}
+.menu-links li {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #444;
+}
+.menu-links li i {
+  color: var(--primary-teal);
+  font-size: 18px;
+}
+
+/* Settings Styles */
+.header-with-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.settings-group h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.settings-card {
+  background: #f5f5f5;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.border-teal {
+  border: 2px solid var(--primary-teal);
+  background: white;
+}
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+.icon-teal {
+  color: var(--primary-teal);
+  font-size: 22px;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: var(--primary-teal);
+}
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+.terms-text {
+  font-size: 9px;
+  text-align: center;
+  color: #888;
+  margin-top: 20px;
+}
+/* Officials Directory Specific Styles */
+.officials-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0 20px;
+  line-height: 1.2;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-container span {
+  font-size: 12px;
+  color: #666;
+}
+
+.officials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns gaya ng nasa image */
+  gap: 15px;
+  padding-bottom: 30px;
+}
+
+.official-card-item {
+  border: 1.5px solid var(--primary-teal);
+  border-radius: 12px;
+  padding: 10px 5px;
+  text-align: center;
+  background: white;
+}
+
+.official-card-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+
+.official-name {
+  font-size: 9px;
+  font-weight: 700;
+  display: block;
+  color: #000;
+}
+
+.official-position {
+  font-size: 8px;
+  color: #777;
+  display: block;
+}
+/* Official Profile Specific Styles */
+.profile-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-teal);
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.profile-header h2 {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.profile-header p {
+  font-size: 12px;
+  color: var(--primary-teal);
+  font-weight: 600;
+}
+
+.info-group {
+  margin-top: 20px;
+}
+
+.info-group h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-card-box {
+  border: 1.5px solid var(--primary-teal);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.contact-row:last-child {
+  margin-bottom: 0;
+}
+
+.contact-row i {
+  color: var(--primary-teal);
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.contact-row span {
+  font-size: 12px;
+  color: #444;
+}
+
+.bio-section h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.bio-text {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
