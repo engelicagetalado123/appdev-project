@@ -204,6 +204,7 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.2s ease;
+    text-decoration: none;
 }
     .btn-login:hover {
         background: #34495e;

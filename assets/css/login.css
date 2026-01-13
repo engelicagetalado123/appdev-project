@@ -1,0 +1,51 @@
+/*=================
+    LOGIN PHP
+=================*/
+
+.login-container {
+    max-width: 400px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+    .login-container h2 {
+        margin-bottom: 1.5rem;
+        color: #2c3e50;
+    }
+
+    .login-container input {
+        width: 100%;
+        padding: 10px;
+        margin: 0.5rem 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .login-container button {
+        width: 100%;
+        padding: 10px;
+        background: #2c3e50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+        .login-container button:hover {
+            background: #34495e;
+        }
+
+    .login-container a {
+        color: #3498db;
+        text-decoration: none;
+    }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
