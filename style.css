@@ -702,3 +702,521 @@ input:checked + .slider:before {
   color: #555;
   text-align: justify;
 }
+
+/* Announcements & Events Page Specific */
+.tab-nav {
+  display: flex;
+  border: 1px solid var(--primary-teal);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: white;
+  color: var(--primary-teal);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: var(--primary-teal);
+  color: white;
+}
+
+.ae-hero h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.ae-hero p {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.ae-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Long Event Card with Image */
+.event-long-card {
+  width: 100%;
+  height: 120px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.event-long-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 12px;
+  color: white;
+}
+
+.event-overlay b {
+  display: block;
+  font-size: 11px;
+}
+
+.event-overlay span {
+  font-size: 9px;
+  opacity: 0.8;
+}
+
+/* List Announcement Style */
+.announcement-row-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f1f3f3; /* Light gray/teal background gaya ng sa image */
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.announcement-row-card i {
+  font-size: 18px;
+  color: var(--primary-teal);
+}
+
+.ann-info b {
+  display: block;
+  font-size: 11px;
+  color: #333;
+}
+
+.ann-info span {
+  font-size: 9px;
+  color: #777;
+}
+
+/* Event Details Specific Styles */
+.event-main-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #222;
+}
+
+.event-subtitle {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.event-banner {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.event-banner img {
+  width: 100%;
+  display: block;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+.info-box i {
+  font-size: 18px;
+  color: var(--primary-teal);
+}
+
+.info-text b {
+  display: block;
+  font-size: 11px;
+  color: var(--primary-teal);
+}
+
+.info-text span {
+  font-size: 10px;
+  color: #444;
+}
+
+.section-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-teal);
+  margin: 20px 0 10px;
+}
+
+.highlights-text {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #444;
+  text-align: justify;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.images-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Event Detail Styles */
+.event-title {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #222;
+}
+.event-sub {
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 15px;
+}
+.event-main-banner img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.event-info-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid var(--primary-teal);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.event-info-card i {
+  color: var(--primary-teal);
+  font-size: 18px;
+}
+.event-info-card label {
+  display: block;
+  font-size: 10px;
+  color: var(--primary-teal);
+  font-weight: 700;
+}
+.event-info-card span {
+  font-size: 10px;
+  color: #444;
+}
+
+.event-text-section h3 {
+  font-size: 14px;
+  color: var(--primary-teal);
+  margin: 20px 0 10px;
+}
+.event-text-section p {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.event-grid img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Full View Overlay Style */
+.full-view-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 2000;
+  padding: 20px;
+}
+.full-view-content h2 {
+  font-size: 22px;
+  margin: 20px 0 5px;
+}
+.full-view-content p {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.full-view-content img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Announcement Details Styling */
+.main-ann-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 15px;
+  color: #1a1a1a;
+}
+
+.ann-subtitle {
+  font-size: 11px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.info-card-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1.5px solid var(--primary-teal);
+  padding: 10px 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.info-card-box i {
+  font-size: 20px;
+  color: var(--primary-teal);
+}
+
+.info-card-text label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary-teal);
+}
+
+.info-card-text span {
+  font-size: 10px;
+  color: #333;
+}
+
+.remember-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary-teal);
+  margin: 25px 0 10px;
+}
+
+.ann-message-section p {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.legal-text-footer {
+  font-size: 9px;
+  color: #999;
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+.legal-text-footer a {
+  color: var(--primary-teal);
+  text-decoration: none;
+}
+
+/* Announcements & Events Page Specific */
+.tab-nav {
+  display: flex;
+  border: 1px solid var(--primary-teal);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: white;
+  color: var(--primary-teal);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: var(--primary-teal);
+  color: white;
+}
+
+.ae-hero h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.ae-hero p {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.ae-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Long Event Card with Image */
+.event-long-card {
+  width: 100%;
+  height: 120px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.event-long-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 12px;
+  color: white;
+}
+
+.event-overlay b {
+  display: block;
+  font-size: 11px;
+}
+
+.event-overlay span {
+  font-size: 9px;
+  opacity: 0.8;
+}
+
+/* List Announcement Style */
+.announcement-row-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f1f3f3; /* Light gray/teal background gaya ng sa image */
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.announcement-row-card i {
+  font-size: 18px;
+  color: var(--primary-teal);
+}
+
+.ann-info b {
+  display: block;
+  font-size: 11px;
+  color: #333;
+}
+
+.ann-info span {
+  font-size: 9px;
+  color: #777;
+}
+
+/* Gallery Overlay Styles */
+.gallery-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.gallery-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.gallery-header i {
+  cursor: pointer;
+  color: #333;
+}
+
+#gallery-main-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+#gallery-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.full-image-container {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.full-image-container img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between; /* Pinaghihiwalay ang kaliwa at kanang elements */
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.burger-menu:active {
+  opacity: 0.5; /* Visual feedback kapag pinindot */
+}

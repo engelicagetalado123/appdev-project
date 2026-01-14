@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Announcements & Events</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Hidden class para sa tabs */
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mobile-container">
+      <header>
+        <div class="logo-section">
+          <i class="fas fa-shield-halved"></i>
+          <div class="logo-text">
+            <b>BARANGAY INFORMATION</b>
+            <span>SYSTEM</span>
+          </div>
+        </div>
+        <div class="menu-icon" onclick="window.location.href='menupage.html'">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+
+      <div class="tab-nav">
+        <button
+          class="tab-btn active"
+          onclick="openTab(event, 'announcements-view')"
+        >
+          Announcements
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'events-view')">
+          Events
+        </button>
+      </div>
+
+      <div class="ae-hero">
+        <h2>Connect with the Community Anywhere</h2>
+        <p>Connect with the Community Anywhere</p>
+      </div>
+
+      <div id="announcements-view" class="tab-content active">
+        <h3 class="ae-section-title">Latest Announcements</h3>
+        <div class="announcement-row-card">
+          <i class="fas fa-house-chimney"></i>
+          <div class="ann-info">
+            <b>Barangay General Cleaning</b><span>November 10, 2025</span>
+          </div>
+        </div>
+        <div class="announcement-row-card">
+          <i class="fas fa-syringe"></i>
+          <div class="ann-info">
+            <b>Libreng Kapon at Bakuna para sa Alaga</b
+            ><span>November 10, 2025</span>
+          </div>
+        </div>
+        <div class="announcement-row-card">
+          <i class="fas fa-hand-holding-medical"></i>
+          <div class="ann-info">
+            <b>Barangay Health Center Immunization Program</b
+            ><span>November 10, 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="events-view" class="tab-content">
+        <h3 class="ae-section-title">Recent Events</h3>
+        <div
+          class="event-long-card"
+          onclick="window.location.href='event_details.html'"
+          style="cursor: pointer"
+        >
+          <img
+            src="https://via.placeholder.com/300x150"
+            alt="Barangay Assembly"
+          />
+          <div class="event-overlay">
+            <b>Barangay Assembly</b>
+            <span>Barangay residents & officials assembly</span>
+          </div>
+        </div>
+        <div
+          class="event-long-card"
+          onclick="window.location.href='event_details.html'"
+          style="cursor: pointer"
+        >
+          <img src="https://via.placeholder.com/300x150" alt="BUSLAK" />
+          <div class="event-overlay">
+            <b>BUSLAK: BUlig eSkweLA sa Kabataan</b>
+            <span>Sangguniang Kabataan Event</span>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i
+          ><i class="fab fa-instagram"></i>
+        </div>
+        <div class="contact-box">
+          <i class="fas fa-phone-alt"></i>
+          <div class="contact-text">
+            <b>+639123456789</b><span>Call Us</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabContent, tabBtns;
+
+        // Itago lahat ng content
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = "none";
+        }
+
+        // Alisin ang 'active' class sa lahat ng buttons
+        tabBtns = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tabBtns.length; i++) {
+          tabBtns[i].className = tabBtns[i].className.replace(" active", "");
+        }
+
+        // Ipakita ang piniling tab at gawing active ang button
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>
