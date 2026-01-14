@@ -702,7 +702,3 @@ input:checked + .slider:before {
   color: #555;
   text-align: justify;
 }
-.list-item {
-    text-decoration: none;
-    color:black;
-}

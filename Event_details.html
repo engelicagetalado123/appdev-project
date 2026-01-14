@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Details</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mobile-container">
+      <header>
+        <div class="back-section" onclick="history.back()">
+          <i class="fas fa-chevron-left"></i>
+          <span style="font-weight: 600; margin-left: 5px">Event</span>
+        </div>
+        <div class="burger-menu" onclick="window.location.href='menupage.html'">
+          <span></span><span></span><span></span>
+        </div>
+      </header>
+
+      <div class="event-detail-body">
+        <h1 class="event-title">Barangay Assembly</h1>
+        <p class="event-sub">Barangay residence & officials assembly</p>
+
+        <div class="event-main-banner">
+          <img src="https://via.placeholder.com/400x200" alt="Banner" />
+        </div>
+
+        <div class="event-info-card">
+          <i class="far fa-calendar-check"></i>
+          <div>
+            <label>Date & Time:</label>
+            <span>October 26, 2025 • 8:00AM - 5:00PM</span>
+          </div>
+        </div>
+
+        <div class="event-info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <label>Location:</label>
+            <span>Barangay Covered Gym</span>
+          </div>
+        </div>
+
+        <div class="event-text-section">
+          <h3>Event Highlights:</h3>
+          <p>
+            The Barangay successfully conducted its Barangay Assembly this
+            October 26, 2025 bringing together residents and local leaders to
+            discuss community matters.
+          </p>
+        </div>
+        <div class="event-images-section">
+          <h3 class="section-label">Event Images:</h3>
+          <div class="images-grid">
+            <img
+              src="event-pic1.jpg"
+              alt="Assembly 1"
+              onclick="openGallery(this.src, 'Barangay Assembly', 'Barangay residents & officials assembly')"
+            />
+            <img
+              src="event-pic2.jpg"
+              alt="Assembly 2"
+              onclick="openGallery(this.src, 'Barangay Assembly', 'Barangay residents & officials assembly')"
+            />
+          </div>
+        </div>
+
+        <div id="imageGalleryOverlay" class="gallery-overlay">
+          <div class="gallery-header">
+            <i class="fas fa-chevron-left" onclick="closeGallery()"></i>
+            <span id="gallery-title-top">Event</span>
+          </div>
+
+          <div class="gallery-body">
+            <h2 id="gallery-main-title"></h2>
+            <p id="gallery-subtitle"></p>
+            <div class="full-image-container">
+              <img id="fullImage" src="" alt="Full View" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i
+          ><i class="fab fa-instagram"></i>
+        </div>
+        <div class="contact-box">
+          <i class="fas fa-phone-alt"></i>
+          <div class="contact-text">
+            <b>+639123456789</b><span>Call Us</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="fullViewOverlay" class="full-view-overlay">
+      <header>
+        <i class="fas fa-chevron-left" onclick="closeFullView()"></i>
+        <span style="font-weight: 600; margin-left: 5px">Event</span>
+      </header>
+      <div class="full-view-content">
+        <h2>Barangay Assembly</h2>
+        <p>Barangay residence & officials assembly</p>
+        <img id="imgContainer" src="" />
+      </div>
+    </div>
+
+    <script>
+      function openGallery(src, title, subtitle) {
+        // I-set ang source ng image at text
+        document.getElementById("fullImage").src = src;
+        document.getElementById("gallery-main-title").innerText = title;
+        document.getElementById("gallery-subtitle").innerText = subtitle;
+
+        // Ipakita ang overlay
+        document.getElementById("imageGalleryOverlay").style.display = "block";
+
+        // I-hide ang main scroll ng page para hindi magalaw ang background
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeGallery() {
+        // Itago ang overlay
+        document.getElementById("imageGalleryOverlay").style.display = "none";
+
+        // Ibalik ang scroll
+        document.body.style.overflow = "auto";
+      }
+    </script>
+  </body>
+</html>

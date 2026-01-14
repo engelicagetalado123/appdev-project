@@ -1,5 +1,4 @@
 <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +58,7 @@
             </div>
         </header>
 
-        <section class="hero text-center py-4 py-md-5">
+        <section class="hero">
             <h1>Connect With Your Community In One Click</h1>
             <p>Seamless Communication, United Community</p>
         </section>
@@ -86,31 +85,32 @@
         <section class="announcements">
             <div class="section-header">
                 <h2>Latest Announcements</h2>
-                <a href="#" class="view-all">View All</a>
+                <a href="announcement.html"
+                   style="font-size: 10px; color: #999; text-decoration: none">View All</a>
             </div>
-            <div class="grid row g-3">
-                <div class="announce-card col-12 col-md-6 col-lg-3">
+            <div class="grid">
+                <div class="announce-card">
                     <i class="fas fa-house-chimney"></i>
                     <div>
                         <h3>Barangay General Cleaning</h3>
                         <span>November 10, 2025</span>
                     </div>
                 </div>
-                <div class="announce-card col-12 col-md-6 col-lg-3">
+                <div class="announce-card">
                     <i class="fas fa-syringe"></i>
                     <div>
                         <h3>Barangay Health Immunization</h3>
                         <span>November 10, 2025</span>
                     </div>
                 </div>
-                <div class="announce-card col-12 col-md-6 col-lg-3">
+                <div class="announce-card">
                     <i class="fas fa-dog"></i>
                     <div>
                         <h3>Libreng Kapon at Bakuna para Alaga</h3>
                         <span>November 10, 2025</span>
                     </div>
                 </div>
-                <div class="announce-card col-12 col-md-6 col-lg-3">
+                <div class="announce-card">
                     <i class="fas fa-basketball"></i>
                     <div>
                         <h3>Inter-Barangay League</h3>
@@ -123,10 +123,9 @@
         <section class="official">
             <div class="section-header">
                 <h2>Official</h2>
-                <a href="officials.html"
-                   style="font-size: 10px; color: #999; text-decoration: none">View All</a>
+                <a href="officials.html" style="font-size: 10px; color: #999; text-decoration: none">View All</a>
             </div>
-            <div class="official-card d-flex align-items-center gap-3">
+            <div class="official-card">
                 <div class="official-info">
                     <h3>Victorino M. Alojipan Jr.</h3>
                     <p>Barangay Captain</p>
@@ -149,8 +148,7 @@
                 </div>
             </div>
         </footer>
-    </div>
-    <!-- Login Modal -->
+    </div><!-- Login Modal -->
     <div id="loginModal" class="modal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content p-4">
@@ -165,9 +163,6 @@
             </div>
         </div>
     </div>
-    
-
-
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="assets/js/menu.js"></script>
 </body>
