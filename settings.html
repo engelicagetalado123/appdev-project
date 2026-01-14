@@ -4,68 +4,218 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Settings</title>
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <style>
+      :root {
+        --teal: #14919b;
+      }
+      body {
+        background: #333;
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .mobile-container {
+        width: 375px;
+        height: 812px;
+        background: white;
+        border-radius: 40px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .back-nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .content {
+        flex: 1;
+        padding: 20px;
+      }
+      h2 {
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 25px;
+      }
+
+      /* Sections gaya ng image_c5fb6e */
+      .settings-group {
+        margin-bottom: 30px;
+      }
+      .settings-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+        cursor: pointer;
+      }
+      .settings-item i {
+        font-size: 24px;
+        color: var(--teal);
+        width: 30px;
+        text-align: center;
+      }
+      .settings-item span {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      /* Notification Box */
+      .notif-box {
+        border: 2px solid var(--teal);
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .notif-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+      }
+      .notif-label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      /* Switch Toggle Style */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 45px;
+        height: 24px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 34px;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+      input:checked + .slider {
+        background-color: var(--teal);
+      }
+      input:checked + .slider:before {
+        transform: translateX(21px);
+      }
+
+      .footer-note {
+        font-size: 9px;
+        color: #999;
+        text-align: center;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      .footer {
+        padding: 15px 25px;
+        border-top: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    </style>
   </head>
-  <body class="mobile-bg">
+  <body>
     <div class="mobile-container">
-      <header class="header-with-title">
-        <i class="fas fa-chevron-left" onclick="history.back()"></i>
-        <h2>Settings</h2>
-        <div class="menu-icon"><span></span><span></span><span></span></div>
+      <header class="header">
+        <a href="menupage.html" class="back-nav"
+          ><i class="fas fa-chevron-left"></i> Settings</a
+        >
+        <i class="fas fa-bars"></i>
       </header>
 
-      <section class="settings-group">
-        <h3>Account Settings</h3>
-        <div class="settings-card">
-          <div class="setting-item">
-            <i class="fas fa-user-circle icon-teal"></i>
+      <div class="content">
+        <div class="settings-group">
+          <h2>Account Settings</h2>
+          <div class="settings-item">
+            <i class="fas fa-user-circle"></i>
             <span>Edit Profile Info</span>
           </div>
-          <div class="setting-item">
-            <i class="fas fa-lock icon-teal"></i>
+          <div class="settings-item">
+            <i class="fas fa-key"></i>
             <span>Change Password</span>
           </div>
         </div>
-      </section>
 
-      <section class="settings-group">
-        <h3>Notification Settings</h3>
-        <div class="settings-card border-teal">
-          <div class="setting-item">
-            <span>Announcements</span>
-            <label class="switch"
-              ><input type="checkbox" checked /><span class="slider"></span
-            ></label>
-          </div>
-          <div class="setting-item">
-            <span>Service Updates</span>
-            <label class="switch"
-              ><input type="checkbox" checked /><span class="slider"></span
-            ></label>
+        <div class="settings-group">
+          <div class="notif-box">
+            <h2 style="margin-top: 0; font-size: 20px">
+              Notification Settings
+            </h2>
+
+            <div class="notif-row">
+              <span class="notif-label">Announcements</span>
+              <label class="switch"
+                ><input type="checkbox" checked /><span class="slider"></span
+              ></label>
+            </div>
+
+            <div class="notif-row">
+              <span class="notif-label">Service Updates</span>
+              <label class="switch"
+                ><input type="checkbox" checked /><span class="slider"></span
+              ></label>
+            </div>
           </div>
         </div>
-      </section>
 
-      <p class="terms-text">
-        By continuing, you agree to Barangay Information System's
-        <a href="#">Terms of Service and Privacy Policy</a>
-      </p>
+        <div class="footer-note">
+          By continuing, you agree to Barangay Information System's
+          <span style="color: var(--teal); font-weight: bold"
+            >Terms of Service and Privacy Policy</span
+          >
+        </div>
+      </div>
 
-      <footer class="sticky-footer">
-        <div class="social-links">
+      <footer class="footer">
+        <div style="display: flex; gap: 12px">
           <i class="fab fa-facebook"></i><i class="fab fa-twitter"></i
           ><i class="fab fa-instagram"></i>
         </div>
-        <div class="contact-info">
-          <i class="fas fa-phone-alt"></i>
-          <div class="phone-text">
-            <span class="number">+639123456789</span>
-            <span class="label">Call Us</span>
-          </div>
+        <div style="font-size: 10px; font-weight: 700; text-align: right">
+          <i class="fas fa-phone-alt" style="color: var(--teal)"></i>
+          +639123456789<br />
+          <span style="color: #999; font-size: 8px">Call Us</span>
         </div>
       </footer>
     </div>
