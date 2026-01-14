@@ -1,0 +1,50 @@
+/* =====================
+   MENU HEADER
+===================== */
+.simple-header {
+    padding: 1rem;
+}
+
+/* =====================
+   MENU HERO
+===================== */
+.menu-hero {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.main-logo h1 {
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+/* =====================
+   MENU LIST
+===================== */
+.menu-links {
+    list-style: none;
+    padding: 1rem;
+}
+
+    .menu-links li,
+    .menu-links a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+    }
+
+/* =====================
+   DESKTOP ENHANCEMENT
+===================== */
+@media (min-width: 992px) {
+    .menu-links {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .menu-hero {
+        padding: 3rem;
+    }
+}

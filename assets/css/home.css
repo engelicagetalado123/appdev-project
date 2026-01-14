@@ -1,0 +1,54 @@
+/* =====================
+   HERO SECTION
+===================== */
+.hero h1 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+}
+
+.hero p {
+    color: #666;
+}
+
+/* =====================
+   CAROUSEL
+===================== */
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.main-card {
+    flex: 1;
+    position: relative;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    padding: 0.75rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+}
+
+/* =====================
+   ANNOUNCEMENTS
+===================== */
+.announce-card {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* =====================
+   OFFICIAL CARD
+===================== */
+.official-card {
+    padding: 1rem;
+    background: #f1f1f1;
+    border-radius: 12px;
+}

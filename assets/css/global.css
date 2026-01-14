@@ -1,0 +1,242 @@
+/* =====================
+   GLOBAL CSS
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    background: #f6f7fb;    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    color: #333;
+    overflow-x: hidden; /* disables horizontal scrolling */
+    width: 100%; /* ensures no accidental overflow */
+}
+
+/* =====================
+   LAYOUT CONTAINER
+===================== */
+.mobile-container {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* Desktop full-width behavior */
+@media (min-width: 992px) {
+    .mobile-container {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* =====================
+   ICON / LINKS
+===================== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+i {
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #333;
+    margin: 4px 0;
+}
+
+/* Menu List */ .menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+    .menu-links li {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.2s ease;
+    }
+
+        .menu-links li:hover {
+            background: #f0f0f0;
+        }
+
+        .menu-links li i {
+            margin-right: 10px;
+            color: #2c3e50;
+        }
+/* =====================
+   FOOTER
+===================== */
+footer {
+    padding: 1rem;
+    text-align: center;
+}
+/* =====================
+   OFF-CANVAS DRAWER
+===================== */
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 275px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+    transition: right 0.3s ease;
+    z-index: 1001;
+    overflow-y: auto; /*Note: vertical scrolling */
+}
+
+    .drawer.open {
+        right: 0;
+    }
+
+.drawer-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.drawer-links {
+    list-style: none;
+    padding: 1rem;
+}
+
+    .drawer-links li {
+        padding: 0.75rem 0;
+    }
+.close-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+    .close-btn:hover {
+        color: #e53935;
+        transform: scale(1.2);
+    }
+    .close-btn:focus {
+        outline: none; 
+    }
+/* =====================
+   OVERLAY
+===================== */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 1000;
+}
+
+    .overlay.show {
+        display: block;
+    }
+
+/* =====================
+   MENU HERO
+===================== */
+.menu-hero {
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+.main-logo h1 {
+    margin-top: 0.5rem;
+    font-size: 20px;
+    line-height: 1.4;
+}
+.main-logo i {
+    font-size: 40px;
+    color: #2c3e50;
+}
+.main-logo h1 {
+    font-size: 18px; /* smaller size */
+    line-height: 1.4; /* better spacing */
+    margin: 0.5rem 0; /* reduce extra space */
+    text-align: center;
+}
+
+.btn-login {
+    display: block;
+    margin: 1rem auto;
+    padding: 10px 20px;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    text-decoration: none;
+}
+    .btn-login:hover {
+        background: #34495e;
+    }
+
+/* =====================
+   MENU LIST
+===================== */
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+    .menu-links li,
+    .menu-links a {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.2s ease;
+    }
+
+/* =====================
+   DESKTOP ENHANCEMENT
+===================== */
+@media (min-width: 992px) {
+    .menu-links {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .menu-hero {
+        padding: 3rem;
+    }
+}
