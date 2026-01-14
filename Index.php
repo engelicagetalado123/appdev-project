@@ -1,3 +1,5 @@
+<?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,19 +31,16 @@
                                 INFORMATION SYSTEM
                             </h1>
                         </div>
-                        <button class="btn-login" onclick="window.location.href='login.php'">Login/Register</button>
+                        <button class="btn-login" onclick="openLoginModal()">Login/Register</button>
                     </div>
                 </div>
 
-                <nav class="menu-list-container"> 
+                <nav class="menu-list-container">
                     <ul class="menu-links">
-                        <li onclick="window.location.href='index.html'"> <i class="fas fa-bullhorn"></i> Announcements & Events </li>
+                        <li onclick="window.location.href='index.php'"> <i class="fas fa-bullhorn"></i> Announcements & Events </li>
                         <li onclick="window.location.href='officials.html'"> <i class="fas fa-users"></i> Officials Directory </li>
-                        <li><i class="fas fa-file-contract"></i> Request Certificate</li> 
-                        <li><i class="fas fa-comments"></i> Residence Feedback</li> 
-                        <li><i class="fas fa-handshake"></i> Meeting Request</li> 
-                        <li onclick="window.location.href='settings.html'"> <i class="fas fa-cog"></i> Settings </li> 
-                    </ul>   
+                        <li onclick="window.location.href='settings.html'"> <i class="fas fa-cog"></i> Settings </li>
+                    </ul>
                 </nav>
             </aside>
 
@@ -151,7 +150,25 @@
             </div>
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="Assets/js/menu.js"></script>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <button type="button" class="btn-close ms-auto" aria-label="Close" onclick="closeLoginModal()"></button>
+                <h2 class="mb-3">Login</h2>
+                <form action="login.php" method="POST">
+                    <input type="text" name="username" class="form-control mb-2" placeholder="Username" required>
+                    <input type="password" name="password" class="form-control mb-2" placeholder="Password" required>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+                <p class="mt-3 text-center">Not registered? <a href="register.php">Register as Migrant</a></p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/js/menu.js"></script>
 </body>
 </html>

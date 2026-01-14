@@ -49,12 +49,12 @@ header {
 /* =====================
    ICON / LINKS
 ===================== */
-a {
+.drawer a {
     text-decoration: none;
     color: inherit;
 }
 
-i {
+.drawer i {
     cursor: pointer;
 }
 
@@ -237,6 +237,54 @@ footer {
     }
 
     .menu-hero {
-        padding: 3rem;
+        padding: 3rem.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1050;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-dialog {
+  max-width: 400px;
+  margin: auto;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+}
+
     }
+}
+/*===================
+    MODAL
+===================*/
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1050;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-dialog {
+  max-width: 400px;
+  margin: auto;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+}
+.login-container a,
+.modal-content a {
+    color: #3498db !important;
+    text-decoration: none !important;
+}
+
+.modal-content a:hover {
+    text-decoration: underline !important;
 }
