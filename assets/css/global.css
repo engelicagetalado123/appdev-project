@@ -5,16 +5,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-html, body {
-    background: #f6f7fb;    
+body {
+    background: #f0f0f0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont;
     color: #333;
     overflow-x: hidden; /* disables horizontal scrolling */
     width: 100%; /* ensures no accidental overflow */
+    
 }
 
 /* =====================
@@ -35,7 +35,6 @@ html, body {
         border-radius: 0;
     }
 }
-
 /* =====================
    HEADER
 ===================== */
@@ -158,18 +157,17 @@ footer {
    OVERLAY
 ===================== */
 
-.overlay {
+#overlay, .overlay {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.4);
     display: none;
-    z-index: 1000;
+    z-index: 1000; /* consistent */
 }
 
-    .overlay.show {
+    #overlay.show, .overlay.show {
         display: block;
     }
-
 /* =====================
    MENU HERO
 ===================== */
@@ -237,27 +235,12 @@ footer {
     }
 
     .menu-hero {
-        padding: 3rem.modal {
-  display: none; 
-  position: fixed;
-  z-index: 1050;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
-}
-
-.modal-dialog {
-  max-width: 400px;
-  margin: auto;
-}
-
-.modal-content {
-  background: #fff;
-  border-radius: 8px;
-}
+        padding: 3rem;
+    }
+ 
 
     }
-}
+
 /*===================
     MODAL
 ===================*/
@@ -267,7 +250,6 @@ footer {
   z-index: 1050;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
 }
 
 .modal-dialog {
@@ -288,3 +270,92 @@ footer {
 .modal-content a:hover {
     text-decoration: underline !important;
 }
+
+/*====================
+    NOTIFICATION
+====================*/
+.notif-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.notification-icon {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+    .notification-icon i {
+        font-size: 20px;
+        color: #333;
+    }
+
+.notif-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+.notif-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 250px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 9999; /* ensures it shows above header/sidebar */
+    display: none; /* hidden until toggled */
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.notif-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .notif-list li {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+        .notif-list li.unread {
+            font-weight: bold;
+        }
+        .notif-list li small {
+            display: block;
+            font-size: 11px;
+            color: #888;
+        }
+        .notif-list li.no-notif {
+            text-align: center;
+            color: #888;
+            font-style: italic;
+            padding: 20px 10px;
+        }
+
+/*====================
+    Delete Notificaton
+====================*/
+.delete-btn {
+    float: right;
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .delete-btn:hover {
+        color: #e74c3c; /* red on hover */
+    }
+

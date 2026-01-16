@@ -1,0 +1,44 @@
+/* =====================
+   Add Resident Form
+===================== */
+.add-resident-form label {
+	font-weight: 600;
+	color: #2c3e50;
+}
+
+.add-resident-form input,
+.add-resident-form select {
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	padding: 8px;
+}
+
+	.add-resident-form input:focus,
+	.add-resident-form select:focus {
+		border-color: #3498db;
+		box-shadow: 0 0 4px rgba(52, 152, 219, 0.4);
+	}
+
+.add-resident-form .btn-success {
+	background-color: #27ae60;
+	border: none;
+}
+
+	.add-resident-form .btn-success:hover {
+		background-color: #219150;
+	}
+
+.add-resident-form .btn-secondary {
+	background-color: #7f8c8d;
+	border: none;
+}
+
+	.add-resident-form .btn-secondary:hover {
+		background-color: #6c7a7a;
+	}
+
+/* Group spacing */
+.add-resident-form .col-md-6,
+.add-resident-form .col-md-4 {
+	margin-bottom: 1rem;
+}

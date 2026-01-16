@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         exit();
     } else {
-        echo "<p style='color:red;'>Invalid login credentials.</p>";
+       $error = "Invalid login credentials.";
     }
 }
 ?>
@@ -45,6 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <button onclick="window.location.href='index.php'" class="btn-back">← Back</button>
   <div class="login-container">
     <h2>Login</h2>
+    <!----Error---->
+     <?php if (!empty($error)): ?>
+      <div class="alert alert-danger"><?php echo $error; ?></div>
+    <?php endif; ?>
     <form action="login.php" method="POST">
       <input type="text" name="username" class="form-control mb-2" placeholder="Email or Contact Number" required>
       <input type="password" name="password" placeholder="Password" required>

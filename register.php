@@ -35,7 +35,7 @@ if ($check->num_rows > 0) {
      $check->close();
     $stmt = $conn->prepare("INSERT INTO users 
         (inhabitant_type, first_name, middle_name, last_name, age, sex, civil_status, birthdate, birthplace, citizenship, address, email, contact, education, username, password, role) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'migrant')");
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'user')");
 
 
     if (!$stmt) {

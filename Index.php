@@ -23,14 +23,16 @@
                 <div class="drawer-header">
                     <button class="close-btn" onclick="closeMenu()" aria-label="Close menu"> <i class="fas fa-times"></i> </button>
                     <div class="menu-hero">
+                        <img src="./icons/logo1.png" alt="Barangay Logo" class="app-logo" />
                         <div class="main-logo">
-                            <i class="fas fa-shield-halved"></i>
-                            <h1>
-                                BARANGAY <br />
-                                INFORMATION SYSTEM
-                            </h1>
+                            <span>BARANGAY</span><br />
+                            <strong>INFORMATION SYSTEM</strong>
                         </div>
-                        <button class="btn-login" onclick="openLoginModal()">Login/Register</button>
+                        <button class="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
+                             Login/Register
+                        </button>
+
+                        <strong>Unregistered User</strong>
                     </div>
                 </div>
 
@@ -43,12 +45,11 @@
                 </nav>
             </aside>
 
-            <div class="logo">
-                <i class="fas fa-shield-halved"></i>
-                <img src="" />
+            <div class="logo-container">
+                <img src="./icons/logo1.png" alt="Barangay Logo" class="app-logo" />
                 <div class="logo-text">
-                    <strong>BARANGAY INFORMATION</strong>
-                    <span>SYSTEM</span>
+                    <span>BARANGAY</span><br />
+                    <strong>INFORMATION SYSTEM</strong>
                 </div>
             </div>
             <div class="menu-icon" onclick="openMenu()">
@@ -71,12 +72,27 @@
                 <i class="fas fa-chevron-left"></i>
             </button>
             <div class="main-card">
-                <img src="https://via.placeholder.com/400x200" alt="Event" />
+                <img src="assets/images/event1.png" alt="Event 1" />
                 <div class="card-overlay">
-                    <strong>BUSLAK:</strong> BUlig eSkweLA sa Kabataan
-                    <small>Sangguniang Kabataan Event</small>
+                    <strong>Barangay Assembly</strong> 
+                    <small>Barangay residence & officials assembly</small>
                 </div>
             </div>
+                <div class="main-card">
+                    <img src="assets/images/event2.png" alt="Event 2" />
+                    <div class="card-overlay">
+                        <strong>BUSLAK:</strong> BUlig eSkweLA sa Kabataan
+                        <small>Sangguniang Kabataan Event</small>
+                    </div>
+                </div>
+
+                <div class="main-card">
+                    <img src="assets/images/event3.png" alt="Event 3" />
+                    <div class="card-overlay">
+                        <strong>KK Assembly:</strong> Katipunan ng Kabataan
+                        <small>Katipunan ng Kabataan Children's Right Talk</small>
+                    </div>
+                </div>
             <button class="nav-btn next">
                 <i class="fas fa-chevron-right"></i>
             </button>
@@ -126,13 +142,15 @@
                 <a href="officials.html" style="font-size: 10px; color: #999; text-decoration: none">View All</a>
             </div>
             <div class="official-card">
-                <div class="official-info">
-                    <h3>Victorino M. Alojipan Jr.</h3>
-                    <p>Barangay Captain</p>
+                <img class="bg-image" src="assets/images/bg.png" alt="Background" /> 
+                <img class="profile-image" src="assets/images/victorino.png" alt="Victorino" /> 
+                
+                    <div class="official-info">
+                        <h3>Victorino M. Alojipan Jr.</h3>
+                        <p>Barangay Captain</p>
+                    </div>
                 </div>
-                <img src="" />
-            </div>
-        </section>
+</section>
 
         <footer>
             <div class="social-icons">
@@ -148,21 +166,27 @@
                 </div>
             </div>
         </footer>
-    </div><!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content p-4">
-                <button type="button" class="btn-close ms-auto" aria-label="Close" onclick="closeLoginModal()"></button>
-                <h2 class="mb-3">Login</h2>
-                <form action="login.php" method="POST">
-                    <input type="text" name="username" class="form-control mb-2" placeholder="Username" required>
-                    <input type="password" name="password" class="form-control mb-2" placeholder="Password" required>
-                    <button type="submit" class="btn btn-primary w-100">Login</button>
-                </form>
-                <p class="mt-3 text-center">Not registered? <a href="register.php">Register as Migrant</a></p>
-            </div>
-        </div>
     </div>
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" data-bs-backdrop="false" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4">
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+      <h2 class="mb-3">Login</h2>
+      <form action="login.php" method="POST">
+        <input type="text" name="username" class="form-control mb-2" placeholder="Username" required>
+        <input type="password" name="password" class="form-control mb-2" placeholder="Password" required>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </form>
+      <p class="mt-3 text-center">
+        Not registered? <a href="register.php">Register as Migrant</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="assets/js/menu.js"></script>
 </body>

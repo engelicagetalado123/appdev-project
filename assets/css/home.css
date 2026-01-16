@@ -1,54 +1,409 @@
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space sa pagitan ng logo at text */
+}
+
+.app-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+
+.logo-text {
+    font-size: 10px; 
+    line-height: 1.2;
+    color: #333;
+    font-family: "Arial", sans-serif;
+}
+
+.logo-text strong {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
 /* =====================
    HERO SECTION
 ===================== */
 .hero h1 {
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 5px;
 }
 
 .hero p {
+    font-size: 12px;
     color: #666;
+    margin-bottom: 10px;
 }
 
 /* =====================
    CAROUSEL
 ===================== */
+.view-all-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+}
+
+.view-all {
+    text-decoration: none;
+    color: #999;
+    font-size: 10px;
+}
 .carousel {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
+    gap: 10px;
+    margin-top: 5px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 }
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
 
 .main-card {
-    flex: 1;
     position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+    flex: 0 0 80%; /* show one card at a time */
+    scroll-snap-align: start;
 }
+
+    .main-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 
 .card-overlay {
     position: absolute;
     bottom: 0;
-    padding: 0.75rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 11px;
+}
+.card-overlay small {
+    display: block;
+    color: white;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 20px;
 }
 
 /* =====================
    ANNOUNCEMENTS
 ===================== */
-.announce-card {
+.section-header {
     display: flex;
-    gap: 0.75rem;
-    padding: 0.75rem;
-    background: #f9f9f9;
-    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 10px;
+}
+
+    .section-header h2 {
+        font-size: 16px;
+    }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.announce-card {
+    background: #9bb8b8;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.announce-card i {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.announce-card h3 {
+    font-size: 10px;
+    line-height: 1.1;
+}
+
+.announce-card span {
+    font-size: 8px;
+    opacity: 0.8;
 }
 
 /* =====================
    OFFICIAL CARD
 ===================== */
 .official-card {
-    padding: 1rem;
-    background: #f1f1f1;
-    border-radius: 12px;
+    background: linear-gradient(135deg, #7eb6b6, #4b8d8d);
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.official-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 3;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.official-info h3 {
+    font-size: 14px;
+}
+
+.official-info p {
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+.official-img {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    width: 110px;
+    filter: drop-shadow(0px -5px 10px rgba(0, 0, 0, 0.2));
+}
+
+img.bg-image {
+    position: absolute; /* sit inside the card */
+    top: 0;
+    left: 0;
+    width: 100%; /* match card width */
+    height: 100%; /* match card height */
+    object-fit: cover; /* crop to fit nicely */
+    z-index: 1;
+}
+
+.profile-image {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    z-index: 2;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    color: #333;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: right;
+}
+
+    .contact i {
+        color: #666;
+        font-size: 18px;
+    }
+
+    .contact strong {
+        display: block;
+        font-size: 11px;
+    }
+
+    .contact span {
+        font-size: 9px;
+        color: #999;
+    }
+
+footer {
+    display: flex;
+    justify-content: space-between; /* Pinaghihiwalay ang kaliwa at kanan */
+    align-items: center;
+    padding: 15px 5px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 20px;
+}
+
+/* Social Icons Styling */
+.social-links {
+    display: flex;
+    gap: 15px; 
+}
+
+    .social-links i {
+        font-size: 20px;
+        color: #444; 
+        cursor: pointer;
+    }
+
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #888; 
+}
+
+    .contact-info i {
+        font-size: 18px;
+    }
+
+.phone-text {
+        transform: rotate( 10deg );
+    display: flex;
+    flex-direction: column; 
+    line-height: 1.2;
+}
+
+    .phone-text .number {
+        font-size: 12px;
+        font-weight: 600;
+        color: #666;
+    }
+
+    .phone-text .label {
+        font-size: 10px;
+    }
+
+:root {
+    --primary-teal: #00897b;
+    --light-teal: #e0f2f1;
+    --border-color: #b2dfdb;
+}
+/*==================
+    RESPONSIVENESS for Mobile
+====================*/
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo-text {
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 18px;
+    }
+
+    .hero p {
+        font-size: 10px;
+    }
+
+    .main-card {
+        height: 120px;
+        flex: 0 0 100%;
+    }
+
+    .card-overlay {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .announce-card h3 {
+        font-size: 9px;
+    }
+
+    .announce-card span {
+        font-size: 7px;
+    }
+
+    .official-card {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .profile-image {
+        position: static;
+        margin-bottom: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .official-info {
+        position: static;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+@media (min-width: 1024px) {
+    .main-card {
+        flex: 0 0 40%;
+        height: 120px; 
+    }
+
+    .card-overlay {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 15px;
+    }
+
+    .announce-card {
+        min-width: 250px;
+        flex-shrink: 0;
+    }
 }
